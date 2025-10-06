@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamnan Seiha | Portafolio</title>
+    <title>Guía Camboyana - Descubre la Magia de Camboya</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Estilos Globales */
@@ -15,10 +15,10 @@
         }
 
         :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #e74c3c;
-            --light: #ecf0f1;
+            --primary: #b8860b;
+            --secondary: #8b0000;
+            --accent: #daa520;
+            --light: #f5f5dc;
             --dark: #2c3e50;
             --text: #333;
             --text-light: #777;
@@ -133,7 +133,7 @@
         }
 
         .nav-links a:hover {
-            color: var(--secondary);
+            color: var(--primary);
         }
 
         .hamburger {
@@ -143,7 +143,9 @@
 
         /* Sección Hero */
         .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
             color: white;
             padding: 150px 0 100px;
             text-align: center;
@@ -179,10 +181,10 @@
 
         .btn-outline:hover {
             background: white;
-            color: var(--primary);
+            color: var(--secondary);
         }
 
-        /* Sección Sobre Mí */
+        /* Sección Sobre Camboya */
         .about-content {
             display: flex;
             align-items: center;
@@ -222,21 +224,21 @@
             color: var(--text-light);
         }
 
-        .skills {
+        .highlights {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             margin-top: 20px;
         }
 
-        .skill {
+        .highlight {
             background: var(--light);
             padding: 8px 15px;
             border-radius: 30px;
             font-size: 0.9rem;
         }
 
-        /* Sección Servicios */
+        /* Sección Destinos */
         .services {
             background: var(--light);
         }
@@ -273,7 +275,7 @@
             color: var(--primary);
         }
 
-        /* Sección Portafolio */
+        /* Sección Galería */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -301,7 +303,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(44, 62, 80, 0.8);
+            background: rgba(184, 134, 11, 0.8);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -324,6 +326,34 @@
         .portfolio-overlay h3 {
             font-size: 1.5rem;
             margin-bottom: 10px;
+        }
+
+        /* Sección Cultura */
+        .culture {
+            background: var(--light);
+        }
+
+        .culture-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .culture-text {
+            flex: 1;
+        }
+
+        .culture-img {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .culture-img img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* Sección Contacto */
@@ -434,7 +464,7 @@
         }
 
         .social-links a:hover {
-            background: var(--secondary);
+            background: var(--primary);
         }
 
         .copyright {
@@ -447,11 +477,11 @@
 
         /* Diseño Responsive */
         @media (max-width: 992px) {
-            .about-content, .contact-content {
+            .about-content, .contact-content, .culture-content {
                 flex-direction: column;
             }
             
-            .about-img, .about-text, .contact-info, .contact-form {
+            .about-img, .about-text, .contact-info, .contact-form, .culture-text, .culture-img {
                 width: 100%;
             }
         }
@@ -520,12 +550,13 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">Chamnan<span>Seiha</span></a>
+                <a href="#" class="logo">Guía<span>Camboyana</span></a>
                 <ul class="nav-links">
                     <li><a href="#home">Inicio</a></li>
-                    <li><a href="#about">Sobre Mí</a></li>
-                    <li><a href="#services">Servicios</a></li>
-                    <li><a href="#portfolio">Portafolio</a></li>
+                    <li><a href="#about">Sobre Camboya</a></li>
+                    <li><a href="#destinations">Destinos</a></li>
+                    <li><a href="#gallery">Galería</a></li>
+                    <li><a href="#culture">Cultura</a></li>
                     <li><a href="#contact">Contacto</a></li>
                 </ul>
                 <div class="hamburger">
@@ -539,103 +570,123 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>Chamnan Seiha</h1>
-                <p>Bienvenido a mi portafolio profesional. Soy un desarrollador y diseñador apasionado creando experiencias digitales que marcan la diferencia.</p>
+                <h1>Guía Camboyana</h1>
+                <p>Descubre la magia, historia y cultura del Reino de Camboya. Explora templos ancestrales, playas paradisíacas y una rica herencia cultural.</p>
                 <div class="hero-btns">
-                    <a href="#portfolio" class="btn">Ver Mi Trabajo</a>
-                    <a href="#contact" class="btn btn-outline">Contáctame</a>
+                    <a href="#destinations" class="btn">Explorar Destinos</a>
+                    <a href="#contact" class="btn btn-outline">Planificar Viaje</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sección Sobre Mí -->
+    <!-- Sección Sobre Camboya -->
     <section id="about">
         <div class="container">
             <div class="section-title">
-                <h2>Sobre Mí</h2>
+                <h2>Sobre Camboya</h2>
             </div>
             <div class="about-content">
                 <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Chamnan Seiha">
+                    <img src="https://images.unsplash.com/photo-1589321599763-35e31b56c719?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Angkor Wat">
                 </div>
                 <div class="about-text">
-                    <h3>¡Hola! Soy Chamnan Seiha</h3>
-                    <p>Soy un desarrollador web y diseñador apasionado con más de 5 años de experiencia creando soluciones digitales para empresas e individuos. Mi experiencia incluye desarrollo front-end, diseño UI/UX y diseño web responsive.</p>
-                    <p>Creo en la creación de interfaces limpias y fáciles de usar que brinden experiencias excepcionales al usuario. Mi objetivo es combinar diseño estético con código funcional para ofrecer productos que superen las expectativas del cliente.</p>
-                    <div class="skills">
-                        <span class="skill">HTML/CSS</span>
-                        <span class="skill">JavaScript</span>
-                        <span class="skill">React</span>
-                        <span class="skill">Diseño UI/UX</span>
-                        <span class="skill">Diseño Responsive</span>
-                        <span class="skill">Desarrollo Web</span>
+                    <h3>El Reino de Camboya</h3>
+                    <p>Camboya, ubicada en el corazón del sudeste asiático, es un país de contrastes fascinantes. Desde los majestuosos templos de Angkor hasta las playas vírgenes del sur, ofrece una experiencia única para viajeros de todo el mundo.</p>
+                    <p>Con una historia que se remonta al poderoso Imperio Jemer, Camboya conserva un patrimonio cultural extraordinario. Su gente, conocida por su calidez y resiliencia, hace que cada visita sea memorable.</p>
+                    <div class="highlights">
+                        <span class="highlight">Templos de Angkor</span>
+                        <span class="highlight">Playas Paradisíacas</span>
+                        <span class="highlight">Gastronomía Única</span>
+                        <span class="highlight">Cultura Milenaria</span>
+                        <span class="highlight">Naturaleza Virgen</span>
+                        <span class="highlight">Artesanías Tradicionales</span>
                     </div>
-                    <a href="#contact" class="btn" style="margin-top: 20px;">Contrátame</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sección Servicios -->
-    <section id="services" class="services">
+    <!-- Sección Destinos -->
+    <section id="destinations" class="services">
         <div class="container">
             <div class="section-title">
-                <h2>Mis Servicios</h2>
+                <h2>Destinos Principales</h2>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-code"></i>
+                        <i class="fas fa-torii-gate"></i>
                     </div>
-                    <h3>Desarrollo Web</h3>
-                    <p>Desarrollo de sitios web personalizados utilizando tecnologías y frameworks modernos para crear aplicaciones web rápidas, responsivas y escalables.</p>
+                    <h3>Siem Reap - Angkor Wat</h3>
+                    <p>Descubre el complejo de templos más grande del mundo, declarado Patrimonio de la Humanidad por la UNESCO. Maravíllate con Angkor Wat, Bayon y Ta Prohm.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
+                        <i class="fas fa-city"></i>
                     </div>
-                    <h3>Diseño UI/UX</h3>
-                    <p>Enfoque de diseño centrado en el usuario creando interfaces intuitivas que mejoran la experiencia del usuario y aumentan el compromiso.</p>
+                    <h3>Phnom Penh</h3>
+                    <p>La vibrante capital de Camboya combina historia moderna con arquitectura colonial. Visita el Palacio Real, el Museo Nacional y el Mercado Central.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-umbrella-beach"></i>
                     </div>
-                    <h3>Diseño Responsive</h3>
-                    <p>Creación de sitios web que se ven y funcionan perfectamente en todos los dispositivos, desde computadoras de escritorio hasta smartphones y tablets.</p>
+                    <h3>Sihanoukville</h3>
+                    <p>Playas de arena blanca, aguas cristalinas e islas tropicales. El destino perfecto para relajarse y disfrutar del mar del Golfo de Tailandia.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sección Portafolio -->
-    <section id="portfolio">
+    <!-- Sección Galería -->
+    <section id="gallery">
         <div class="container">
             <div class="section-title">
-                <h2>Mi Portafolio</h2>
+                <h2>Galería de Camboya</h2>
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80" alt="Proyecto 1">
+                    <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1133&q=80" alt="Angkor Wat">
                     <div class="portfolio-overlay">
-                        <h3>Sitio E-Commerce</h3>
-                        <p>Solución e-commerce full-stack con integración de pagos</p>
+                        <h3>Angkor Wat</h3>
+                        <p>El templo más grande y mejor conservado del complejo de Angkor</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80" alt="Proyecto 2">
+                    <img src="https://images.unsplash.com/photo-1534008897995-27a23e859048?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Bayon">
                     <div class="portfolio-overlay">
-                        <h3>Panel de Negocios</h3>
-                        <p>Panel de análisis para inteligencia empresarial</p>
+                        <h3>Templo Bayon</h3>
+                        <p>Famoso por sus torres con rostros de piedra sonrientes</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Proyecto 3">
+                    <img src="https://images.unsplash.com/photo-1544644181-4e133b2460d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80" alt="Mercado">
                     <div class="portfolio-overlay">
-                        <h3>UI App Móvil</h3>
-                        <p>Diseño de interfaz de usuario para aplicación de seguimiento fitness</p>
+                        <h3>Mercados Locales</h3>
+                        <p>Coloridos mercados llenos de artesanías y comida tradicional</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Cultura -->
+    <section id="culture" class="culture">
+        <div class="container">
+            <div class="section-title">
+                <h2>Cultura y Tradiciones</h2>
+            </div>
+            <div class="culture-content">
+                <div class="culture-text">
+                    <h3>La Rica Herencia Jemer</h3>
+                    <p>La cultura camboyana está profundamente influenciada por el budismo theravada y el antiguo Imperio Jemer. Las tradiciones se mantienen vivas a través de la danza, música, arte y festivales.</p>
+                    <p>La danza Apsara, declarada Patrimonio Cultural Inmaterial por la UNESCO, es una de las expresiones artísticas más importantes del país. Sus movimientos elegantes y trajes elaborados cuentan historias mitológicas.</p>
+                    <p>La gastronomía camboyana es una deliciosa fusión de sabores, con influencias tailandesas, vietnamitas y chinas. El pescado fermentado (prahok) y la sopa agria (samlor machu) son platos emblemáticos.</p>
+                    <a href="#contact" class="btn" style="margin-top: 20px;">Aprender Más</a>
+                </div>
+                <div class="culture-img">
+                    <img src="https://images.unsplash.com/photo-1598880940080-7fc0e5332a6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Danza Camboyana">
                 </div>
             </div>
         </div>
@@ -645,17 +696,17 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-title">
-                <h2>Contáctame</h2>
+                <h2>Contáctanos</h2>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Ponte en Contacto</h3>
-                    <p>No dudes en contactarme si buscas un desarrollador, tienes alguna pregunta o simplemente quieres conectar.</p>
+                    <h3>Planifica Tu Viaje</h3>
+                    <p>¿Listo para explorar Camboya? Contáctanos para obtener información personalizada sobre tours, alojamiento y experiencias únicas.</p>
                     <div class="contact-details">
                         <div class="contact-detail">
                             <i class="fas fa-map-marker-alt"></i>
                             <div>
-                                <h4>Ubicación</h4>
+                                <h4>Oficina Principal</h4>
                                 <p>Phnom Penh, Camboya</p>
                             </div>
                         </div>
@@ -663,16 +714,22 @@
                             <i class="fas fa-envelope"></i>
                             <div>
                                 <h4>Email</h4>
-                                <p>chamnan.seiha@example.com</p>
+                                <p>info@guiacamboyana.com</p>
                             </div>
                         </div>
                         <div class="contact-detail">
                             <i class="fas fa-phone"></i>
                             <div>
                                 <h4>Teléfono</h4>
-                                <p>+855 12 345 678</p>
+                                <p>+855 23 123 456</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
                     </div>
                 </div>
                 <div class="contact-form">
@@ -686,14 +743,20 @@
                             <input type="email" id="email" class="form-control" placeholder="Ingresa tu email" required>
                         </div>
                         <div class="form-group">
-                            <label for="subject">Asunto</label>
-                            <input type="text" id="subject" class="form-control" placeholder="Ingresa el asunto" required>
+                            <label for="subject">Interés Principal</label>
+                            <select id="subject" class="form-control" required>
+                                <option value="">Selecciona tu interés</option>
+                                <option value="angkor">Templos de Angkor</option>
+                                <option value="beaches">Playas e Islas</option>
+                                <option value="culture">Cultura y Tradiciones</option>
+                                <option value="custom">Tour Personalizado</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="message">Tu Mensaje</label>
-                            <textarea id="message" class="form-control" placeholder="Ingresa tu mensaje" required></textarea>
+                            <textarea id="message" class="form-control" placeholder="Cuéntanos sobre tu viaje ideal..." required></textarea>
                         </div>
-                        <button type="submit" class="btn">Enviar Mensaje</button>
+                        <button type="submit" class="btn">Enviar Consulta</button>
                     </form>
                 </div>
             </div>
@@ -705,18 +768,17 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <a href="#" class="logo">Chamnan<span>Seiha</span></a>
+                    <a href="#" class="logo">Guía<span>Camboyana</span></a>
                 </div>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tripadvisor"></i></a>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 Chamnan Seiha. Todos los derechos reservados.</p>
+                <p>&copy; 2023 Guía Camboyana. Todos los derechos reservados. | Descubre la magia de Camboya</p>
             </div>
         </div>
     </footer>
@@ -740,7 +802,7 @@
         // Envío de Formulario
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('¡Gracias por tu mensaje! Me pondré en contacto contigo pronto.');
+            alert('¡Gracias por tu consulta! Nos pondremos en contacto contigo pronto para ayudarte a planificar tu viaje a Camboya.');
             this.reset();
         });
         
